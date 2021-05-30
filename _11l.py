@@ -1,3 +1,21 @@
+Char = str
+Byte = int
+Int64 = int
+UInt64 = int
+UInt32 = int
+BigInt = int
+
+def move(obj):
+    return obj
+
+from copy import copy, deepcopy
+
+from typing import List, Tuple, NamedTuple, Dict, DefaultDict, Callable, Set, Optional, IO
+from enum import IntEnum
+
+import collections # for `defaultdict` and `deque`
+
+
 # [https://stackoverflow.com/questions/4223349/python-implementation-for-next-permutation-in-stl <- google:‘next_permutation python’]
 def next_permutation(a):
     """Generate the lexicographically next permutation inplace.
