@@ -52,3 +52,26 @@ def is_sorted(a):
 # [https://www.rosettacode.org/wiki/Suffixation_of_decimal_numbers#Python]
 def format_float(x, precision):
     return f'{x:.{precision}f}'
+
+# For [https://www.rosettacode.org/wiki/Peaceful_chess_queen_armies#D]
+# class IVec2
+
+#def set_str_char(s, char_index, char)
+
+# For [https://www.rosettacode.org/wiki/Range_modifications#Python]
+# def set_tuple_element(t, element_index, element_value):
+#     l = list(t)
+#     l[element_index] = element_value
+#     return tuple(l)
+
+# def add_to_tuple_element(t, element_index, addendum):
+#     l = list(t)
+#     l[element_index] += addendum
+#     return tuple(l)
+
+class MutTupleClass: # [-FIX mypy error: Invalid type "1.MutTuple"-]
+    def __getitem__(self, params):
+        return list
+    def __call__(self, *elems):
+        return list(elems)
+MutTuple = MutTupleClass()
