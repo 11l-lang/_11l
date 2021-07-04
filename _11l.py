@@ -8,6 +8,9 @@ BigInt = int
 def move(obj):
     return obj
 
+def ref(obj):
+    return obj
+
 from copy import copy, deepcopy
 
 from typing import List, Tuple, NamedTuple, Dict, DefaultDict, Callable, Set, Optional, IO
@@ -75,3 +78,7 @@ class MutTupleClass: # [-FIX mypy error: Invalid type "1.MutTuple"-]
     def __call__(self, *elems):
         return list(elems)
 MutTuple = MutTupleClass()
+
+
+def hexu(n):
+    return hex(n)[2:].upper()
