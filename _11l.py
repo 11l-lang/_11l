@@ -82,3 +82,6 @@ MutTuple = MutTupleClass()
 
 def hexu(n):
     return hex(n)[2:].upper()
+
+def wrap(x, min_val, max_val):
+    return (x - min_val) % (max_val - min_val) + min_val
