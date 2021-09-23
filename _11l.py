@@ -13,7 +13,7 @@ def ref(obj):
 
 from copy import copy, deepcopy
 
-from typing import List, Tuple, NamedTuple, Dict, DefaultDict, Callable, Set, Optional, IO
+from typing import List, Tuple, NamedTuple, Dict, DefaultDict, Callable, Set, Optional, IO, TextIO, BinaryIO
 from enum import IntEnum
 
 import collections # for `defaultdict` and `deque`
@@ -55,6 +55,9 @@ def is_sorted(a):
 # [https://www.rosettacode.org/wiki/Suffixation_of_decimal_numbers#Python]
 def format_float(x, precision):
     return f'{x:.{precision}f}'
+
+def format_float_exp(x, precision, width = 0):
+    return f'{x:{width}.{precision}e}'
 
 # For [https://www.rosettacode.org/wiki/Peaceful_chess_queen_armies#D]
 # class IVec2
