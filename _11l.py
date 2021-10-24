@@ -88,3 +88,16 @@ def hexu(n):
 
 def wrap(x, min_val, max_val):
     return (x - min_val) % (max_val - min_val) + min_val
+
+# [https://www.rosettacode.org/wiki/First_perfect_square_in_base_n_with_n_unique_digits#D]
+ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+def int_to_str_with_radix(num, base):
+    cnum = abs(num)
+    result = ''
+    while True:
+        result += ALPHABET[cnum % base]
+        cnum //= base
+        if cnum == 0: break
+    if num < 0:
+        result += '-'
+    return result[::-1]
