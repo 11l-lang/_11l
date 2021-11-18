@@ -92,6 +92,7 @@ def wrap(x, min_val, max_val):
 # [https://www.rosettacode.org/wiki/First_perfect_square_in_base_n_with_n_unique_digits#D]
 ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def int_to_str_with_radix(num, base):
+    assert(base >= 2 and base <= 36)
     cnum = abs(num)
     result = ''
     while True:
@@ -101,3 +102,8 @@ def int_to_str_with_radix(num, base):
     if num < 0:
         result += '-'
     return result[::-1]
+
+# [https://www.rosettacode.org/wiki/MD5/Implementation#Python]
+def rotl32(x, amount):
+    x &= 0xFFFFFFFF
+    return ((x<<amount) | (x>>(32-amount))) & 0xFFFFFFFF
