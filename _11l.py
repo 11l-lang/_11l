@@ -110,3 +110,10 @@ def rotl32(x, amount):
 
 def Bytes(s): # if you need `b"\xAE"`, please note that `Bytes("\xAE")` will not work, use `[Byte(0xAE)]` or `bytes(b"\xAE")` instead
     return bytes(s, 'ascii')
+
+# [https://en.wikipedia.org/wiki/Product_(mathematics)#Product_of_a_sequence]
+def product_of_a_seq(seq):
+    r = 1
+    for v in seq:
+        r *= v
+    return r
