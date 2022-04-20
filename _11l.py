@@ -1,8 +1,12 @@
 Char = str
 Byte = int
+Int8 = int
+Int16 = int
+Int32 = int
 Int64 = int
-UInt64 = int
+UInt16 = int
 UInt32 = int
+UInt64 = int
 BigInt = int
 
 def move(obj):
