@@ -128,3 +128,6 @@ def product_of_a_seq(seq):
 
 def nidiv(a, b):
     return a // b
+
+def nmod(a, b):
+    return a % b
