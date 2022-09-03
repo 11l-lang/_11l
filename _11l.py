@@ -125,3 +125,6 @@ def product_of_a_seq(seq):
     for v in seq:
         r *= v
     return r
+
+def nidiv(a, b):
+    return a // b
