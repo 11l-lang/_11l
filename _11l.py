@@ -8,6 +8,8 @@ UInt16 = int
 UInt32 = int
 UInt64 = int
 BigInt = int
+Size   = int
+USize  = int
 
 def move(obj):
     return obj
