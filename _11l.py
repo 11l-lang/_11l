@@ -118,6 +118,9 @@ def rotr32(x, amount):
     x &= 0xFFFFFFFF
     return ((x>>amount) | (x<<(32-amount))) & 0xFFFFFFFF
 
+def popcount(x):
+    return bin(x).count('1')
+
 def Bytes(s): # if you need `b"\xAE"`, please note that `Bytes("\xAE")` will not work, use `[Byte(0xAE)]` or `bytes(b"\xAE")` instead
     return bytes(s, 'ascii')
 
