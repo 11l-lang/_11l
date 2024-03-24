@@ -20,6 +20,8 @@ def ref(obj):
 from copy import copy, deepcopy
 
 from typing import List, Tuple, NamedTuple, Dict, DefaultDict, Callable, Set, Optional, IO, TextIO, BinaryIO
+TextOutput = TextIO
+BinaryOutput = BinaryIO
 from enum import IntEnum
 
 import collections # for `defaultdict` and `deque`
