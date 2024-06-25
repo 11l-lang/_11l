@@ -138,3 +138,22 @@ def nidiv(a, b):
 
 def nmod(a, b):
     return a % b
+
+try:
+    import colorama
+    colorama.init()
+
+    term_colors = {
+        ''      : colorama.Style.RESET_ALL,
+        'red'   : colorama.Fore.LIGHTRED_EX,
+        'green' : colorama.Fore.LIGHTGREEN_EX,
+        'blue'  : colorama.Fore.LIGHTBLUE_EX,
+        'gray'  : colorama.Style.DIM,
+    }
+
+    def term_color(color = ''):
+        print(term_colors[color], end = '')
+
+except ImportError:
+    def term_color(color = ''):
+        pass
